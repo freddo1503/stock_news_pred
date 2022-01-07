@@ -1,0 +1,10 @@
+{% extends "tickers/layout.html" %}
+
+{% block body %}
+    <h1>Tickers</h1>
+    <ul>
+        {% for ticker in tickers %}
+            <li>{{ticker.ticker}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

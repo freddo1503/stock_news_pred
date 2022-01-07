@@ -1,0 +1,28 @@
+{% extends "users/layout.html" %}
+
+
+{% block body %}
+
+    {% load static %}<link rel="stylesheet" type="text/css" href="{% static 'users/style.css' %}">
+    
+    {% if message %}
+        <div>{{  message }}</div>
+    {% endif %}
+        
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <div class="fadeIn first">
+                <h1>Login</h1>
+                <!-- {% load static %} <img src="{% static 'users/media/data-engineering.png' %}" id="icon" alt="User Icon" /> -->
+            </div>
+
+            <!-- Login Form -->
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                <input type="text" class="fadeIn second" name="username" placeholder="Username">
+                <input type="password" class="fadeIn third" name="password" placeholder="Password">
+                <input type="submit" class="fadeIn fourth" value="Log In">
+            </form>
+        </div>
+    </div>
+{% endblock %}

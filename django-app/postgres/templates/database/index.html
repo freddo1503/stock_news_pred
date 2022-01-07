@@ -1,0 +1,10 @@
+{% extends "database/layout.html" %}
+
+{% block body %}
+    <h1>Stocks News Database</h1>
+    <ul>
+        {% for ticker in tickers %}
+            <li>{{ticker.ticker}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
