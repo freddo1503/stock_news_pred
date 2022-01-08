@@ -1,5 +1,5 @@
 # Final Le Wagon project : stock_news_pred
-Description : The aims is to reuse the [project](https://github.com/FrCloers/stock_news_pred) realized with my buddies during the datascience bootcamp at Le Wagon. Create a containerized app and provide an API with an user interface to access the data needed (news, tweets and stock prices) for ML and RNN.
+Description : The aims is to reuse the [project](https://github.com/FrCloers/stock_news_pred) realized with my buddies during the datascience bootcamp at Le Wagon. Create a containerized app and provide a data repository with an user interface and an api to allow users to access the data (news, tweets and stock prices) they need for analysis, ML and RNN.
 <br><br />
 ## Data engineering
 - Uses cases applied to this project :
