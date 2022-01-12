@@ -6,10 +6,10 @@ from django.shortcuts import render
 from django.urls import reverse
 
 # Create your views here.
-def index(request):
+def home(request):
     if not request.user.is_authenticated:
         return HttpResponseRedirect(reverse('login'))
-    return render(request, "users/user.html")
+    return render(request, "admin/index.html")
 
 
 def login_view(request):
@@ -19,7 +19,7 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return HttpResponseRedirect(reverse('index'))
+            return HttpResponseRedirect(reverse('home'))
         else:
             return render(request, 'users/login.html', {
                 'message':'Invalid credentials.'
