@@ -17,6 +17,6 @@ what is being done ?
     2. Stream processing for real-time data access (newest) (Apache Flink)
 - User interface :
     - backend : Django
-    - frontend : Bootstrap, streamlit
+    - frontend : Bootstrap, streamlit (https://colorlib.com/polygon/elaadmin/)
 ## Infrastructure  
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vT__ZhdYUCwcakf5-tnuEDev2UXDrCnYE2dP62SLgbIrfUz0Eb_GKW-On-toyCjKPzr1sdn7X2et1um/pub?w=480&amp;h=360">
