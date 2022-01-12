@@ -14,7 +14,7 @@ what is being done ?
     - [Twitter API](https://developer.twitter.com/en/docs/twitter-api)
 - Data processing and storage : 
     1. Created pipelines ETL for Data warehouse (Amazon Redshift or Snowflake).
-    2. Stream processing for real-time data access (newest) (Apache Flink)
+    2. Stream processing for real-time data access (newest) (Apache Spark)
 - User interface :
     - backend : Django
     - frontend : Bootstrap, streamlit (https://colorlib.com/polygon/elaadmin/)
