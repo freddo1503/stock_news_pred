@@ -32,3 +32,9 @@ def logout_view(request):
     return render(request, 'users/login.html', {
         'message':'Logged out.'
     })
+
+def tables_data(request):
+    return render(request,'admin/tables-data.html')
+
+def tables_basic(request):
+    pass
