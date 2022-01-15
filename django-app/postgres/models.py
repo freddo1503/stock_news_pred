@@ -7,6 +7,9 @@ class Ticker(models.Model):
     """Ticker table"""
     ticker = models.CharField(max_length=80, primary_key=True)
 
+    def __str__(self):
+        return f"{self.ticker}"
+
 class News (models.Model):
     """News table"""
     title = models.TextField(default="title")
