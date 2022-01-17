@@ -1,0 +1,52 @@
+{% extends "admin/layout.html" %}
+{% block body %}
+        <div class="content">
+            <div class="animated fadeIn">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong class="card-title">Data Table</strong>
+                            </div>
+                            <div class="card-body">
+                                <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Ticker</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for ticker in tickers %}
+                                        <tr>
+                                            <td>{{ticker.ticker}}</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- .animated -->
+        </div><!-- .content -->
+    
+
+    <!-- Right Panel -->
+    <script src="../static/assets/js/lib/data-table/datatables.min.js"></script>
+    <script src="../static/assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
+    <script src="../static/assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+    <script src="../static/assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
+    <script src="../static/assets/js/lib/data-table/jszip.min.js"></script>
+    <script src="../static/assets/js/lib/data-table/vfs_fonts.js"></script>
+    <script src="../static/assets/js/lib/data-table/buttons.html5.min.js"></script>
+    <script src="../static/assets/js/lib/data-table/buttons.print.min.js"></script>
+    <script src="../static/assets/js/lib/data-table/buttons.colVis.min.js"></script>
+    <script src="../static/assets/js/init/datatables-init.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $('#bootstrap-data-table-export').DataTable();
+      } );
+  </script>
+{% endblock %}

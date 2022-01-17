@@ -1,6 +1,7 @@
-from django.test import TestCase
+from django.test import TestCase, Client
 
 from .models import Ticker
+from .views import *
 
 # Create your tests here.
 class TickerTestCase(TestCase):
@@ -13,3 +14,4 @@ class TickerTestCase(TestCase):
         t = Ticker.objects.get(ticker='AAAA')
         print (t)
         self.assertEqual(t.ticker, 'AAAA')
+        

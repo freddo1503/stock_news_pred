@@ -2,7 +2,17 @@
 
 {% block body %}
 
-    <h1>Welcome, This is the news of the day</h1>
+<h1>Welcome, This is the news of the day</h1>
+<form action="{% url 'add_news' %}" method="post">
+    {% csrf_token %}
+    <select name='ticker'>
+        <option selected="selected" disabled='true'>Objects on page:</option>
+        {% for ticker in tickers %}
+            <option>{{ticker.ticker}}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Select">
+</form>
 
     <h2>{{ title }}</h2>
     <p>{{ content }}</p>

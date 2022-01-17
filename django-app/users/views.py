@@ -8,11 +8,13 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 
+from postgres.models import *
+
 # Create your views here.
 def home(request):
     if not request.user.is_authenticated:
         return HttpResponseRedirect(reverse('login'))
-    return render(request, "admin/layout.html")
+    return render(request, "admin/dashboard.html")
 
 
 def login_view(request):
@@ -43,3 +45,15 @@ def tables_data(request):
 @login_required
 def tables_basic(request):
     return render(request,'admin/tables-basic.html')
+
+@login_required
+def table_ticker(request):
+    return render(request,'admin/table-ticker.html',{
+        "tickers": Ticker.objects.all()
+    })
+
+@login_required
+def table_news(request):
+    return render(request,'admin/table-news.html',{
+        "tickers": Ticker.objects.all()
+    })

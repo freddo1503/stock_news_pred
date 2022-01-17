@@ -33,3 +33,4 @@ def stocks (request):
     return render(request, "ticker/index.html", {
         "tickers": Stocks.objects.all()# pylint: disable=maybe-no-member
     })
+    
