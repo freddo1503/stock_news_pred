@@ -1,7 +1,10 @@
 from django.contrib import auth
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
+
 from django.http.response import HttpResponseRedirect
 from django.http import HttpResponseRedirect
+
 from django.shortcuts import render
 from django.urls import reverse
 
@@ -33,8 +36,10 @@ def logout_view(request):
         'message':'Logged out.'
     })
 
+@login_required
 def tables_data(request):
     return render(request,'admin/tables-data.html')
 
+@login_required
 def tables_basic(request):
-    pass
+    return render(request,'admin/tables-basic.html')
