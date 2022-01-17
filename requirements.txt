@@ -28,6 +28,7 @@ joblib
 memoized-property
 termcolor
 psycopg2
+livereload
 
 #environment
 python-dotenv
