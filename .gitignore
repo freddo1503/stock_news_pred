@@ -5,7 +5,7 @@
 raw_data/
 *.csv
 **/__pycache__/
-.env
+.env.dev
 .streamlit
-.pg_service.conf
-.my_pgpass
+.env.prod
+.env.prod.db

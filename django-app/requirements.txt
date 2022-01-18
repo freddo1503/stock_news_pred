@@ -1,0 +1,14 @@
+#environment
+python-dotenv
+gunicorn==20.1.0
+
+#dB connection
+psycopg2-binary==2.9.1
+
+#Framework
+django
+streamlit
+
+# data science
+numpy
+pandas
